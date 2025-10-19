@@ -43,9 +43,19 @@ cd scandere-cli-tool
 
 Option 1: Run using Python
 
-    xecute the following command inside the project directory:
+    | Flag             | Example          | Description                                                                                                          |
+    | ---------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+    
+    | `--output`       | `--output html`  | Choose output format: `json` (default) or `html`. Generates `report.json` or `report.html`.                          |
+    
+    | `--no-discover`  | `--no-discover`  | Skip automatic endpoint discovery and scan only the provided target URL.                                             |
+    
+    | `--confirm`      | `--confirm`      | Enables deeper vulnerability verification. Performs extra checks (boolean-based SQLi and high-confidence XSS tests). |
+   
+    | `--time-confirm` | `--time-confirm` | Runs **time-based SQLi confirmation** (⚠️ slower & more intrusive — use only with permission).                       |
+    
+    | `--fast`         | `--fast`         | Enables **fast scan mode** — fewer XSS payloads and reduced timeout for quicker results (useful for large sites).    |
 
-        - python main.py target
 
 Option 2: Run the CLI directly (after setup)
 
